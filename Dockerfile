@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.9.3-alpine
 
 # Environment vars we can configure against
 # But these are optional, so we won't define them now
