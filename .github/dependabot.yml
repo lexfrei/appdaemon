@@ -1,0 +1,42 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: python-socketio
+    versions:
+    - 5.0.4
+    - 5.1.0
+  - dependency-name: deepdiff
+    versions:
+    - 5.2.2
+    - 5.2.3
+  - dependency-name: pygments
+    versions:
+    - 2.7.4
+    - 2.8.0
+  - dependency-name: jinja2
+    versions:
+    - 2.11.2
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: python
+    versions:
+    - 3.9.1.pre.alpine
+    - 3.9.2.pre.alpine
+    - 3.9.3.pre.alpine
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
